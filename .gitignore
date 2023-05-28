@@ -1,0 +1,7 @@
+node_modules/
+**/node_modules/
+.vscode/
+server/db/
+server/models/
+server/source_documents/
+client/.next/
