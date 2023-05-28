@@ -162,7 +162,7 @@ def get_answer():
         embedding_function=embeddings,
         client_settings=CHROMA_SETTINGS,
     )
-    retriever = db.as_retriever()
+    retriever = db.as_retriever(search_kwargs={"k": target_source_chunks})
     if llm == None:
         return "Model not downloaded", 400
     qa = RetrievalQA.from_chain_type(
